@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/dotnet/aspnet:3.1 as base
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 as base
 
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 as build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 as build
 WORKDIR /src
 COPY ContosoUniversity.WebApplication/ContosoUniversity.WebApplication.csproj ContosoUniversity.WebApplication/
 RUN dotnet restore ContosoUniversity.WebApplication/ContosoUniversity.WebApplication.csproj

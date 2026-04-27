@@ -1,0 +1,36 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+
+  api:
+    build:
+      context: ./src
+      dockerfile: ContosoUniversity.API/Dockerfile
+    ports:
+      - "5001:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__ContosoUniversityAPIContext: "Server=sqlserver;Database=SchoolContext-API;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;MultipleActiveResultSets=true"
+    depends_on:
+      - sqlserver
+    restart: on-failure
+
+  webapp:
+    build:
+      context: ./src
+      dockerfile: ContosoUniversity.WebApplication/Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:80
+      URLAPI: "http://api:80/"
+    depends_on:
+      - api
+    restart: on-failure

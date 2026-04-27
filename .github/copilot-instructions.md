@@ -146,3 +146,8 @@ dotnet run --project src/ContosoUniversity.WebApplication
 # Deploy infrastructure
 az deployment group create -g <rg> -f infra/core/main.bicep
 ```
+
+<!-- SPECKIT START -->
+For additional context about technologies to be used, project structure,
+shell commands, and other important information, read the current plan
+<!-- SPECKIT END -->
