@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "58i25MqWpYA=",
+  "dgSpecHash": "i4H3SsTHWvQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+  "projectFilePath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gappiah\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\gappiah\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
@@ -192,7 +192,7 @@
     "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
     "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
     "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
+    "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.netcore.app.host.win-arm64\\6.0.36\\microsoft.netcore.app.host.win-arm64.6.0.36.nupkg.sha512"
   ],
   "logs": []
 }

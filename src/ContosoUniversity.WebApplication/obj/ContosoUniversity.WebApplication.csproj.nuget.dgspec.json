@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj": {}
+    "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj": {
+    "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+        "projectUniqueName": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
         "projectName": "ContosoUniversity.WebApplication",
-        "projectPath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+        "projectPath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
         "packagesPath": "C:\\Users\\gappiah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.WebApplication\\obj\\",
+        "outputPath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.WebApplication\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gappiah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\gappiah\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net6.0": {
@@ -93,7 +86,7 @@
               "version": "[6.0.36, 6.0.36]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "name": "Microsoft.NETCore.App.Host.win-arm64",
               "version": "[6.0.36, 6.0.36]"
             },
             {
@@ -113,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

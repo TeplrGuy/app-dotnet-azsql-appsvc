@@ -1,0 +1,1025 @@
+{
+  "packageGovernance": {
+    "totalDistinctPackages": 23,
+    "totalVersionDriftInstances": 0,
+    "targetFramework": "net10.0",
+    "packages": [
+      {
+        "name": "Azure.Extensions.AspNetCore.Configuration.Secrets",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.2.2",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Azure.Identity",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.21.0",
+        "isCompatible": true,
+        "description": "NuGet package contains security vulnerability",
+        "versions": [
+          {
+            "version": "1.8.2",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "1.21.0"
+        }
+      },
+      {
+        "name": "Bogus",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "34.0.2",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "coverlet.collector",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "3.1.2",
+            "projects": [
+              "ContosoUniversity.Test"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.ApplicationInsights.AspNetCore",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": false,
+        "description": "NuGet package is deprecated",
+        "versions": [
+          {
+            "version": "2.21.0",
+            "projects": [
+              "ContosoUniversity.API",
+              "ContosoUniversity.WebApplication"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.7",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "6.0.5",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.7"
+        }
+      },
+      {
+        "name": "Microsoft.AspNetCore.Razor.Language",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "NuGet package functionality is included with framework reference",
+        "versions": [
+          {
+            "version": "6.0.15",
+            "projects": [
+              "ContosoUniversity.API",
+              "ContosoUniversity.WebApplication"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.Data.SqlClient",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "7.0.1",
+        "isCompatible": true,
+        "description": "NuGet package contains security vulnerability",
+        "versions": [
+          {
+            "version": "5.0.1",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "7.0.1"
+        }
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.7",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "7.0.4",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.7"
+        }
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.SqlServer",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.7",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "7.0.4",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.7"
+        }
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Tools",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.7",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "7.0.4",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.7"
+        }
+      },
+      {
+        "name": "Microsoft.Extensions.Azure",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": false,
+        "description": "NuGet package is deprecated",
+        "versions": [
+          {
+            "version": "1.6.3",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.Extensions.DependencyInjection",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.7",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "ContosoUniversity.WebApplication"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.7"
+        }
+      },
+      {
+        "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.7",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "ContosoUniversity.WebApplication"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.7"
+        }
+      },
+      {
+        "name": "Microsoft.NET.Test.Sdk",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "17.2.0",
+            "projects": [
+              "ContosoUniversity.CodedUITest",
+              "ContosoUniversity.Test"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.2",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "6.0.4",
+            "projects": [
+              "ContosoUniversity.API",
+              "ContosoUniversity.WebApplication"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.2"
+        }
+      },
+      {
+        "name": "MSTest.TestAdapter",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.2.10",
+            "projects": [
+              "ContosoUniversity.CodedUITest",
+              "ContosoUniversity.Test"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "MSTest.TestFramework",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.2.10",
+            "projects": [
+              "ContosoUniversity.CodedUITest",
+              "ContosoUniversity.Test"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Newtonsoft.Json",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "13.0.4",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "13.0.3",
+            "projects": [
+              "ContosoUniversity.WebApplication"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "13.0.4"
+        }
+      },
+      {
+        "name": "NSwag.AspNetCore",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "13.18.2",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Selenium.WebDriver",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.1.1",
+            "projects": [
+              "ContosoUniversity.CodedUITest"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Selenium.WebDriver.ChromeDriver",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "101.0.4951.4100",
+            "projects": [
+              "ContosoUniversity.CodedUITest"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "System.Runtime.Extensions",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "NuGet package functionality is included with framework reference",
+        "versions": [
+          {
+            "version": "4.3.1",
+            "projects": [
+              "ContosoUniversity.API"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "ContosoUniversity.API",
+      "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "isSdk": true,
+      "currentFrameworks": [
+        "net6.0"
+      ],
+      "targetFramework": "net10.0",
+      "dependencies": {
+        "packages": [
+          {
+            "name": "Azure.Extensions.AspNetCore.Configuration.Secrets",
+            "version": "1.2.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Azure.Identity",
+            "version": "1.8.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package contains security vulnerability",
+            "compatibility": "valid",
+            "recommendedVersion": "1.21.0",
+            "upgrade": {
+              "newVersion": "1.21.0"
+            }
+          },
+          {
+            "name": "Bogus",
+            "version": "34.0.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.ApplicationInsights.AspNetCore",
+            "version": "2.21.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+            "version": "6.0.5",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.7",
+            "upgrade": {
+              "newVersion": "10.0.7"
+            }
+          },
+          {
+            "name": "Microsoft.AspNetCore.Razor.Language",
+            "version": "6.0.15",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.Data.SqlClient",
+            "version": "5.0.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package contains security vulnerability",
+            "compatibility": "valid",
+            "recommendedVersion": "7.0.1",
+            "upgrade": {
+              "newVersion": "7.0.1"
+            }
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore",
+            "version": "7.0.4",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.7",
+            "upgrade": {
+              "newVersion": "10.0.7"
+            }
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.SqlServer",
+            "version": "7.0.4",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.7",
+            "upgrade": {
+              "newVersion": "10.0.7"
+            }
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Tools",
+            "version": "7.0.4",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.7",
+            "upgrade": {
+              "newVersion": "10.0.7"
+            }
+          },
+          {
+            "name": "Microsoft.Extensions.Azure",
+            "version": "1.6.3",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+            "version": "6.0.4",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.2",
+            "upgrade": {
+              "newVersion": "10.0.2"
+            }
+          },
+          {
+            "name": "NSwag.AspNetCore",
+            "version": "13.18.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "System.Runtime.Extensions",
+            "version": "4.3.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          }
+        ],
+        "assemblies": [],
+        "projectReferences": [],
+        "frameworkReferences": []
+      }
+    },
+    {
+      "name": "ContosoUniversity.CodedUITest",
+      "path": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj",
+      "isSdk": true,
+      "currentFrameworks": [
+        "net6.0"
+      ],
+      "targetFramework": "net10.0",
+      "dependencies": {
+        "packages": [
+          {
+            "name": "Microsoft.NET.Test.Sdk",
+            "version": "17.2.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "MSTest.TestAdapter",
+            "version": "2.2.10",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "MSTest.TestFramework",
+            "version": "2.2.10",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Selenium.WebDriver",
+            "version": "4.1.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Selenium.WebDriver.ChromeDriver",
+            "version": "101.0.4951.4100",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          }
+        ],
+        "assemblies": [
+          {
+            "name": "$(_TestFrameworkExtensionsRoot)Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions",
+            "version": "",
+            "isTransitive": true,
+            "physicalPath": "ContosoUniversity.CodedUITest\\$(_TestFrameworkExtensionsRoot)Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
+            "compatibility": "valid"
+          }
+        ],
+        "projectReferences": [],
+        "frameworkReferences": []
+      }
+    },
+    {
+      "name": "ContosoUniversity.Test",
+      "path": "ContosoUniversity.Test\\ContosoUniversity.Test.csproj",
+      "isSdk": true,
+      "currentFrameworks": [
+        "net6.0"
+      ],
+      "targetFramework": "net10.0",
+      "dependencies": {
+        "packages": [
+          {
+            "name": "Microsoft.NET.Test.Sdk",
+            "version": "17.2.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.Test\\ContosoUniversity.Test.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "MSTest.TestAdapter",
+            "version": "2.2.10",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.Test\\ContosoUniversity.Test.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "MSTest.TestFramework",
+            "version": "2.2.10",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.Test\\ContosoUniversity.Test.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "coverlet.collector",
+            "version": "3.1.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.Test\\ContosoUniversity.Test.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          }
+        ],
+        "assemblies": [
+          {
+            "name": "$(_TestFrameworkExtensionsRoot)Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions",
+            "version": "",
+            "isTransitive": true,
+            "physicalPath": "ContosoUniversity.Test\\$(_TestFrameworkExtensionsRoot)Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
+            "compatibility": "valid"
+          }
+        ],
+        "projectReferences": [],
+        "frameworkReferences": []
+      }
+    },
+    {
+      "name": "ContosoUniversity.WebApplication",
+      "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+      "isSdk": true,
+      "currentFrameworks": [
+        "net6.0"
+      ],
+      "targetFramework": "net10.0",
+      "dependencies": {
+        "packages": [
+          {
+            "name": "Microsoft.ApplicationInsights.AspNetCore",
+            "version": "2.21.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj"
+              }
+            ],
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.AspNetCore.Razor.Language",
+            "version": "6.0.15",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyInjection",
+            "version": "6.0.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.7",
+            "upgrade": {
+              "newVersion": "10.0.7"
+            }
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+            "version": "6.0.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.7",
+            "upgrade": {
+              "newVersion": "10.0.7"
+            }
+          },
+          {
+            "name": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+            "version": "6.0.4",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.2",
+            "upgrade": {
+              "newVersion": "10.0.2"
+            }
+          },
+          {
+            "name": "Newtonsoft.Json",
+            "version": "13.0.3",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "13.0.4",
+            "upgrade": {
+              "newVersion": "13.0.4"
+            }
+          }
+        ],
+        "assemblies": [],
+        "projectReferences": [],
+        "frameworkReferences": []
+      }
+    }
+  ]
+}

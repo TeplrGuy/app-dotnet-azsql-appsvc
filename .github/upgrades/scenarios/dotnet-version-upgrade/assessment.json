@@ -1,0 +1,1227 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-04-27T19:33:51.9237939Z",
+  "analysisEndTime": "2026-04-27T19:33:57.6739736Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 4,
+      "issues": 7,
+      "incidents": 40,
+      "effort": 40
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 7,
+        "Optional": 7,
+        "Potential": 26,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 19,
+        "Project": 4,
+        "Api": 17
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "startingProject": true,
+      "issues": 5,
+      "storyPoints": 14,
+      "properties": {
+        "appName": "ContosoUniversity.API",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net6.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 28,
+        "numberOfCodeFiles": 23,
+        "linesTotal": 1258,
+        "linesOfCode": 1217,
+        "totalApiScanned": 1466,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "d993b367-88ce-4bcb-a63d-edfb589b4af0",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 6.0.5\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.7",
+              "protected": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 6.0.5\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.7"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 6.0.5\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.7",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 6.0.5\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.7",
+            "label": "Microsoft.AspNetCore.Mvc.NewtonsoftJson 6.0.5",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+              "PackageVersion": "6.0.5",
+              "PackageNewVersion": "10.0.7",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4a2086cc-e13b-4c8e-be88-ea85d5c18799",
+          "ruleId": "NuGet.0003",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Razor.Language, 6.0.15\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.AspNetCore.Razor.Language, 6.0.15\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.AspNetCore.Razor.Language, 6.0.15\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.AspNetCore.Razor.Language, 6.0.15\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.AspNetCore.Razor.Language 6.0.15",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Razor.Language",
+              "PackageVersion": "6.0.15",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "6858b75a-ba33-45af-887c-6569cebb7f28",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.7",
+              "protected": "Microsoft.EntityFrameworkCore, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.7"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.7",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.7",
+            "label": "Microsoft.EntityFrameworkCore 7.0.4",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore",
+              "PackageVersion": "7.0.4",
+              "PackageNewVersion": "10.0.7",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "67194681-8bf7-47e4-8d6c-97eb29d95af8",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.7",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.7"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.7",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.7",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 7.0.4",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "7.0.4",
+              "PackageNewVersion": "10.0.7",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0ccd1d00-434a-4e4d-89bf-ce344ec57630",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.7",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.7"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.7",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 7.0.4\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.7",
+            "label": "Microsoft.EntityFrameworkCore.Tools 7.0.4",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "7.0.4",
+              "PackageNewVersion": "10.0.7",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "6ced9768-57cb-4545-a926-49e427cef9e7",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 6.0.4\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+              "protected": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 6.0.4\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 6.0.4\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+            "protectedSnippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 6.0.4\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+            "label": "Microsoft.VisualStudio.Web.CodeGeneration.Design 6.0.4",
+            "properties": {
+              "PackageId": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+              "PackageVersion": "6.0.4",
+              "PackageNewVersion": "10.0.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b012eafa-c6cb-4053-9499-09282d3afe29",
+          "ruleId": "NuGet.0003",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Runtime.Extensions, 4.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "System.Runtime.Extensions, 4.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "System.Runtime.Extensions, 4.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "System.Runtime.Extensions, 4.3.1\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "System.Runtime.Extensions 4.3.1",
+            "properties": {
+              "PackageId": "System.Runtime.Extensions",
+              "PackageVersion": "4.3.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f6ef0e44-92af-45ba-b20a-7c8438042162",
+          "ruleId": "NuGet.0004",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Azure.Identity, 1.8.2\n\nRecommendation:\n\nAzure.Identity, 1.21.0",
+              "protected": "Azure.Identity, 1.8.2\n\nRecommendation:\n\nAzure.Identity, 1.21.0"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Azure.Identity, 1.8.2\n\nRecommendation:\n\nAzure.Identity, 1.21.0",
+            "protectedSnippet": "Azure.Identity, 1.8.2\n\nRecommendation:\n\nAzure.Identity, 1.21.0",
+            "label": "Azure.Identity 1.8.2",
+            "properties": {
+              "PackageId": "Azure.Identity",
+              "PackageVersion": "1.8.2",
+              "PackageNewVersion": "1.21.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f71b83ef-8241-414a-b017-a88c44af56f6",
+          "ruleId": "NuGet.0005",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Azure.Identity, 1.8.2\n\nRecommendation:\n\nThis version has a vulnerability rated as MODERATE severity, which represents an additional attack surface in enterprise authentication systems and could potentially be chained with other vulnerabilities to create more significant security risks.\nRemove Azure.Identity, and replace with new package Azure.Identity, 1.21.0",
+              "protected": "Azure.Identity, 1.8.2\n\nRecommendation:\n\nThis version has a vulnerability rated as MODERATE severity, which represents an additional attack surface in enterprise authentication systems and could potentially be chained with other vulnerabilities to create more significant security risks.\nRemove Azure.Identity, and replace with new package Azure.Identity, 1.21.0"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Azure.Identity, 1.8.2\n\nRecommendation:\n\nThis version has a vulnerability rated as MODERATE severity, which represents an additional attack surface in enterprise authentication systems and could potentially be chained with other vulnerabilities to create more significant security risks.\nRemove Azure.Identity, and replace with new package Azure.Identity, 1.21.0",
+            "protectedSnippet": "Azure.Identity, 1.8.2\n\nRecommendation:\n\nThis version has a vulnerability rated as MODERATE severity, which represents an additional attack surface in enterprise authentication systems and could potentially be chained with other vulnerabilities to create more significant security risks.\nRemove Azure.Identity, and replace with new package Azure.Identity, 1.21.0",
+            "label": "Azure.Identity 1.8.2",
+            "properties": {
+              "PackageId": "Azure.Identity",
+              "PackageVersion": "1.8.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "9f8e15d3-b83e-4c42-9860-63f783a9a9f9",
+          "ruleId": "NuGet.0005",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.ApplicationInsights.AspNetCore, 2.21.0\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.0",
+              "protected": "Microsoft.ApplicationInsights.AspNetCore, 2.21.0\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.0"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.ApplicationInsights.AspNetCore, 2.21.0\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.0",
+            "protectedSnippet": "Microsoft.ApplicationInsights.AspNetCore, 2.21.0\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.0",
+            "label": "Microsoft.ApplicationInsights.AspNetCore 2.21.0",
+            "properties": {
+              "PackageId": "Microsoft.ApplicationInsights.AspNetCore",
+              "PackageVersion": "2.21.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "075b06bd-5472-46c4-afb6-6cc72cd52d75",
+          "ruleId": "NuGet.0004",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Data.SqlClient, 5.0.1\n\nRecommendation:\n\nMicrosoft.Data.SqlClient, 7.0.1",
+              "protected": "Microsoft.Data.SqlClient, 5.0.1\n\nRecommendation:\n\nMicrosoft.Data.SqlClient, 7.0.1"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.Data.SqlClient, 5.0.1\n\nRecommendation:\n\nMicrosoft.Data.SqlClient, 7.0.1",
+            "protectedSnippet": "Microsoft.Data.SqlClient, 5.0.1\n\nRecommendation:\n\nMicrosoft.Data.SqlClient, 7.0.1",
+            "label": "Microsoft.Data.SqlClient 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Data.SqlClient",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": "7.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b48777f2-aae3-4e55-9b19-3e169f20b3aa",
+          "ruleId": "NuGet.0005",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Data.SqlClient, 5.0.1\n\nRecommendation:\n\nAn important security issue exists in this version of the package. It is recommended to update to a newer version.\nhttps://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0056\n\nA regression was introduced in 5.0.1 that resulted in a memory leak during certain async operations. It\u0027s recommended to update to at least 5.0.2 to avoid the issue.\nRemove Microsoft.Data.SqlClient, and replace with new package Microsoft.Data.SqlClient, 7.0.1",
+              "protected": "Microsoft.Data.SqlClient, 5.0.1\n\nRecommendation:\n\nAn important security issue exists in this version of the package. It is recommended to update to a newer version.\nhttps://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0056\n\nA regression was introduced in 5.0.1 that resulted in a memory leak during certain async operations. It\u0027s recommended to update to at least 5.0.2 to avoid the issue.\nRemove Microsoft.Data.SqlClient, and replace with new package Microsoft.Data.SqlClient, 7.0.1"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.Data.SqlClient, 5.0.1\n\nRecommendation:\n\nAn important security issue exists in this version of the package. It is recommended to update to a newer version.\nhttps://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0056\n\nA regression was introduced in 5.0.1 that resulted in a memory leak during certain async operations. It\u0027s recommended to update to at least 5.0.2 to avoid the issue.\nRemove Microsoft.Data.SqlClient, and replace with new package Microsoft.Data.SqlClient, 7.0.1",
+            "protectedSnippet": "Microsoft.Data.SqlClient, 5.0.1\n\nRecommendation:\n\nAn important security issue exists in this version of the package. It is recommended to update to a newer version.\nhttps://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0056\n\nA regression was introduced in 5.0.1 that resulted in a memory leak during certain async operations. It\u0027s recommended to update to at least 5.0.2 to avoid the issue.\nRemove Microsoft.Data.SqlClient, and replace with new package Microsoft.Data.SqlClient, 7.0.1",
+            "label": "Microsoft.Data.SqlClient 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Data.SqlClient",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "6369a8dc-c9af-4d2a-bd7f-b33dfee2d47f",
+          "ruleId": "NuGet.0005",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Azure, 1.6.3\n\nRecommendation:\n\nThis version takes a dependency on a deprecated version of Azure.Identity.\nRemove Microsoft.Extensions.Azure, and replace with new package Microsoft.Extensions.Azure, 1.14.0",
+              "protected": "Microsoft.Extensions.Azure, 1.6.3\n\nRecommendation:\n\nThis version takes a dependency on a deprecated version of Azure.Identity.\nRemove Microsoft.Extensions.Azure, and replace with new package Microsoft.Extensions.Azure, 1.14.0"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Microsoft.Extensions.Azure, 1.6.3\n\nRecommendation:\n\nThis version takes a dependency on a deprecated version of Azure.Identity.\nRemove Microsoft.Extensions.Azure, and replace with new package Microsoft.Extensions.Azure, 1.14.0",
+            "protectedSnippet": "Microsoft.Extensions.Azure, 1.6.3\n\nRecommendation:\n\nThis version takes a dependency on a deprecated version of Azure.Identity.\nRemove Microsoft.Extensions.Azure, and replace with new package Microsoft.Extensions.Azure, 1.14.0",
+            "label": "Microsoft.Extensions.Azure 1.6.3",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Azure",
+              "PackageVersion": "1.6.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f869a0fe-d2f0-4ad2-82b2-dcff8ec46162",
+          "ruleId": "Project.0002",
+          "projectPath": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net6.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.API\\ContosoUniversity.API.csproj",
+            "snippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 6,
+      "properties": {
+        "appName": "ContosoUniversity.CodedUITest",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 5,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 2247,
+        "linesOfCode": 301,
+        "totalApiScanned": 633,
+        "minLinesOfCodeToChange": 5,
+        "maxLinesOfCodeToChange": 5
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "4e4f32ac-834a-4132-a16c-57586b9b4e93",
+          "ruleId": "Project.0002",
+          "projectPath": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net6.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj",
+            "snippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "6b07cdd8-5724-4b0a-84e6-bd71a1caf318",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.CodedUITest\\NavigationMenuTest.cs",
+            "snippet": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 29,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "25ee6b90-ff67-40c8-8126-ef0d1534d848",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.CodedUITest\\DepartmentsTest.cs",
+            "snippet": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 141,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "ac3a3e53-34f1-4a95-91c5-8e62b3b87f07",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.CodedUITest\\DepartmentsTest.cs",
+            "snippet": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 99,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "02e6bf32-6080-4e9f-9400-8a92f6092ce2",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.CodedUITest\\DepartmentsTest.cs",
+            "snippet": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 58,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "4689c567-d6ad-4386-84f2-a65a2c2e1b8f",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "ContosoUniversity.CodedUITest\\ContosoUniversity.CodedUITest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.CodedUITest\\DepartmentsTest.cs",
+            "snippet": "driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 16
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "ContosoUniversity.Test\\ContosoUniversity.Test.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "ContosoUniversity.Test",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 6,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 2018,
+        "linesOfCode": 72,
+        "totalApiScanned": 43,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "fe107dfe-fa00-4aea-8c1e-b4434fd0f690",
+          "ruleId": "Project.0002",
+          "projectPath": "ContosoUniversity.Test\\ContosoUniversity.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net6.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.Test\\ContosoUniversity.Test.csproj",
+            "snippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+      "startingProject": true,
+      "issues": 6,
+      "storyPoints": 19,
+      "properties": {
+        "appName": "ContosoUniversity.WebApplication",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net6.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 81,
+        "numberOfCodeFiles": 67,
+        "linesTotal": 5353,
+        "linesOfCode": 2700,
+        "totalApiScanned": 15021,
+        "minLinesOfCodeToChange": 12,
+        "maxLinesOfCodeToChange": 12
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "45506496-8d23-4370-8a86-fc6332afc34f",
+          "ruleId": "NuGet.0003",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Razor.Language, 6.0.15\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.AspNetCore.Razor.Language, 6.0.15\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+            "snippet": "Microsoft.AspNetCore.Razor.Language, 6.0.15\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.AspNetCore.Razor.Language, 6.0.15\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.AspNetCore.Razor.Language 6.0.15",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Razor.Language",
+              "PackageVersion": "6.0.15",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "bd6455fc-1710-4851-87ac-4d73277497fd",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.DependencyInjection, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.7",
+              "protected": "Microsoft.Extensions.DependencyInjection, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.7"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+            "snippet": "Microsoft.Extensions.DependencyInjection, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.7",
+            "protectedSnippet": "Microsoft.Extensions.DependencyInjection, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.7",
+            "label": "Microsoft.Extensions.DependencyInjection 6.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.DependencyInjection",
+              "PackageVersion": "6.0.0",
+              "PackageNewVersion": "10.0.7",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "ab4e6a5a-adfe-48e4-9ac2-6bc7873821c8",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.DependencyInjection.Abstractions, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.7",
+              "protected": "Microsoft.Extensions.DependencyInjection.Abstractions, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.7"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+            "snippet": "Microsoft.Extensions.DependencyInjection.Abstractions, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.7",
+            "protectedSnippet": "Microsoft.Extensions.DependencyInjection.Abstractions, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.7",
+            "label": "Microsoft.Extensions.DependencyInjection.Abstractions 6.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.DependencyInjection.Abstractions",
+              "PackageVersion": "6.0.0",
+              "PackageNewVersion": "10.0.7",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3a017ae4-2b1f-4291-b603-f7490ad851b5",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 6.0.4\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+              "protected": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 6.0.4\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+            "snippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 6.0.4\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+            "protectedSnippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 6.0.4\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+            "label": "Microsoft.VisualStudio.Web.CodeGeneration.Design 6.0.4",
+            "properties": {
+              "PackageId": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+              "PackageVersion": "6.0.4",
+              "PackageNewVersion": "10.0.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0e5a9050-3882-4a71-b77d-abf663fe3954",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.3",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.3",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3ea4c6ab-7168-4e7d-b4c9-47faa6cb0d2e",
+          "ruleId": "NuGet.0005",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.ApplicationInsights.AspNetCore, 2.21.0\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.0",
+              "protected": "Microsoft.ApplicationInsights.AspNetCore, 2.21.0\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.0"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+            "snippet": "Microsoft.ApplicationInsights.AspNetCore, 2.21.0\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.0",
+            "protectedSnippet": "Microsoft.ApplicationInsights.AspNetCore, 2.21.0\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.0",
+            "label": "Microsoft.ApplicationInsights.AspNetCore 2.21.0",
+            "properties": {
+              "PackageId": "Microsoft.ApplicationInsights.AspNetCore",
+              "PackageVersion": "2.21.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "48a4cb46-bb3d-4ca5-a15d-209c2cbcec93",
+          "ruleId": "Project.0002",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net6.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+            "snippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "ca1aeb26-ebca-479e-b589-eb266c9f08d2",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "logger.LogInformation(\u0022Base Address = \u0022 \u002B cli.BaseAddress.ToString());",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Pages\\About.cshtml.cs",
+            "snippet": "logger.LogInformation(\u0022Base Address = \u0022 \u002B cli.BaseAddress.ToString());",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 29,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "125f98be-f012-407e-8a2b-af26ed0f2b39",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Msg = \u0022BaseAddress = \u0022 \u002B cli.BaseAddress \u002B \u0022 ---- \u0022;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Pages\\About.cshtml.cs",
+            "snippet": "Msg = \u0022BaseAddress = \u0022 \u002B cli.BaseAddress \u002B \u0022 ---- \u0022;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "0cbf71f5-dd67-4758-8971-f1d7a6ba700e",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "checks.Add(new HealthCheckResult\r\n            {\r\n                Name = \u0022Database\u0022,\r\n                Status = \u0022Healthy\u0022,\r\n                Duration = TimeSpan.FromMilliseconds(10)\r\n            });",
+              "protected": "M:System.TimeSpan.FromMilliseconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Controllers\\HealthController.cs",
+            "snippet": "checks.Add(new HealthCheckResult\r\n            {\r\n                Name = \u0022Database\u0022,\r\n                Status = \u0022Healthy\u0022,\r\n                Duration = TimeSpan.FromMilliseconds(10)\r\n            });",
+            "protectedSnippet": "M:System.TimeSpan.FromMilliseconds(System.Double)",
+            "label": "M:System.TimeSpan.FromMilliseconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 61,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "6e216689-17b8-419e-93c0-09c0b3a9023b",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Exception diagnostics are suppressed when IExceptionHandler.TryHandleAsync returns true ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseExceptionHandler(\u0022/Error\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Program.cs",
+            "snippet": "app.UseExceptionHandler(\u0022/Error\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "label": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/exception-handler-diagnostics-suppressed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 40,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "64f65dd4-7a51-4ab1-a3ca-8153bb558686",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "client.BaseAddress = new Uri(section[\u0022Address\u0022]);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Program.cs",
+            "snippet": "client.BaseAddress = new Uri(section[\u0022Address\u0022]);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 57
+          }
+        },
+        {
+          "incidentId": "fc9216bf-0891-44df-8b63-8670e9c8e3cd",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "client.BaseAddress = new Uri(section[\u0022Address\u0022]);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Program.cs",
+            "snippet": "client.BaseAddress = new Uri(section[\u0022Address\u0022]);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 57
+          }
+        },
+        {
+          "incidentId": "54df46d9-7c25-43d1-a3a2-92b58cb0c16b",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "client.BaseAddress = new Uri(section[\u0022Address\u0022]);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Program.cs",
+            "snippet": "client.BaseAddress = new Uri(section[\u0022Address\u0022]);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 57
+          }
+        },
+        {
+          "incidentId": "928d4e39-b8fc-4aaa-ba73-c73323180f7e",
+          "ruleId": "Api.0003",
+          "description": "URI query redaction in IHttpClientFactory logs ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddHttpClient(\u0022client\u0022, client =\u003E { client.BaseAddress = new Uri(section[\u0022Address\u0022]); });",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.Net.Http.HttpClient})"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Program.cs",
+            "snippet": "builder.Services.AddHttpClient(\u0022client\u0022, client =\u003E { client.BaseAddress = new Uri(section[\u0022Address\u0022]); });",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.Net.Http.HttpClient})",
+            "label": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.Net.Http.HttpClient})",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/9.0/query-redaction-logs.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "921431a1-e5bf-40f5-b872-00b89d18bf4a",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "client.BaseAddress = new Uri(builder.Configuration[\u0022URLAPI\u0022]);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Program.cs",
+            "snippet": "client.BaseAddress = new Uri(builder.Configuration[\u0022URLAPI\u0022]);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 57
+          }
+        },
+        {
+          "incidentId": "121aa0b9-4987-43ab-a5e0-9feab9f4f2b1",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "client.BaseAddress = new Uri(builder.Configuration[\u0022URLAPI\u0022]);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Program.cs",
+            "snippet": "client.BaseAddress = new Uri(builder.Configuration[\u0022URLAPI\u0022]);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 57
+          }
+        },
+        {
+          "incidentId": "e4c25719-2be9-4dfa-af12-c321a4cb04d5",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "client.BaseAddress = new Uri(builder.Configuration[\u0022URLAPI\u0022]);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Program.cs",
+            "snippet": "client.BaseAddress = new Uri(builder.Configuration[\u0022URLAPI\u0022]);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 57
+          }
+        },
+        {
+          "incidentId": "cec8091a-c6a0-4b5f-b3da-817b9f2c9553",
+          "ruleId": "Api.0003",
+          "description": "URI query redaction in IHttpClientFactory logs ",
+          "projectPath": "ContosoUniversity.WebApplication\\ContosoUniversity.WebApplication.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddHttpClient(\u0022client\u0022, client =\u003E { client.BaseAddress = new Uri(builder.Configuration[\u0022URLAPI\u0022]); });",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.Net.Http.HttpClient})"
+            },
+            "kind": "File",
+            "path": "ContosoUniversity.WebApplication\\Program.cs",
+            "snippet": "builder.Services.AddHttpClient(\u0022client\u0022, client =\u003E { client.BaseAddress = new Uri(builder.Configuration[\u0022URLAPI\u0022]); });",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.Net.Http.HttpClient})",
+            "label": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.Net.Http.HttpClient})",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/9.0/query-redaction-logs.md",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 4
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0003": {
+      "id": "NuGet.0003",
+      "isFeature": false,
+      "description": "NuGet package functionality is included with framework reference.\n\nPackage needs to be removed.",
+      "label": "NuGet package functionality is included with framework reference",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262609",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0004": {
+      "id": "NuGet.0004",
+      "isFeature": false,
+      "description": "NuGet package contains security vulnerabilities.\n\nPackage needs to be upgraded to a newer version that addresses known security vulnerabilities.",
+      "label": "NuGet package contains security vulnerability",
+      "severity": "Optional",
+      "effort": 1
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    }
+  }
+}

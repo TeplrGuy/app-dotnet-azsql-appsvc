@@ -147,7 +147,12 @@ dotnet run --project src/ContosoUniversity.WebApplication
 az deployment group create -g <rg> -f infra/core/main.bicep
 ```
 
+## Modernization Demo Guide
+
+For a step-by-step walkthrough of modernizing this application from .NET 6 to .NET 10 LTS using Spec Kit and the modernize-dotnet plugin, see [docs/demo-guide.md](../docs/demo-guide.md).
+
 <!-- SPECKIT START -->
 For additional context about technologies to be used, project structure,
-shell commands, and other important information, read the current plan
+shell commands, and other important information, read the current plan at
+`specs/001-net6-to-net10-migration/plan.md`
 <!-- SPECKIT END -->

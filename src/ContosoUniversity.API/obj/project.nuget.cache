@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2JNRllDGyGs=",
+  "dgSpecHash": "6KbT/xtlR0s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
+  "projectFilePath": "c:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gappiah\\.nuget\\packages\\azure.core\\1.30.0\\azure.core.1.30.0.nupkg.sha512",
     "C:\\Users\\gappiah\\.nuget\\packages\\azure.extensions.aspnetcore.configuration.secrets\\1.2.2\\azure.extensions.aspnetcore.configuration.secrets.1.2.2.nupkg.sha512",
@@ -237,16 +237,16 @@
     "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
     "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
     "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
+    "C:\\Users\\gappiah\\.nuget\\packages\\microsoft.netcore.app.host.win-arm64\\6.0.36\\microsoft.netcore.app.host.win-arm64.6.0.36.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.8.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-5mfx-4wcx-rv27",
-      "projectPath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "projectPath": "c:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "filePath": "c:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net6.0"
@@ -256,9 +256,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.8.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
-      "projectPath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "projectPath": "c:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "filePath": "c:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net6.0"
@@ -268,9 +268,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.8.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
-      "projectPath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "projectPath": "c:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "filePath": "c:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net6.0"
@@ -280,9 +280,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Microsoft.Data.SqlClient' 5.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "projectPath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "projectPath": "c:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\ALT-CICD\\contoso-resilience-demo\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
+      "filePath": "c:\\Users\\gappiah\\OneDrive - Microsoft\\Documents\\Solution Engineer\\Developer-Sessions\\App-Mod-V2\\app-template-dotnet-azuresql-appsvc\\src\\ContosoUniversity.API\\ContosoUniversity.API.csproj",
       "libraryId": "Microsoft.Data.SqlClient",
       "targetGraphs": [
         "net6.0"
