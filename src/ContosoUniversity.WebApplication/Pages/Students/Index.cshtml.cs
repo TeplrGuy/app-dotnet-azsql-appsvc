@@ -1,7 +1,7 @@
-﻿using Microsoft.ApplicationInsights;
+using Microsoft.ApplicationInsights;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -28,7 +28,7 @@ namespace ContosoUniversity.WebApplication.Pages.Students
             if (string.IsNullOrEmpty(SearchString))
             {
                 var response = await client.CreateClient("client").GetStringAsync("api/Students?page=" + (PageNumber ?? 1).ToString());
-                Student = JsonConvert.DeserializeObject<Models.APIViewModels.StudentResult>(response);
+                Student = JsonSerializer.Deserialize<Models.APIViewModels.StudentResult>(response);
             }
             else
             {
@@ -43,7 +43,7 @@ namespace ContosoUniversity.WebApplication.Pages.Students
                 telemetry.TrackEvent("SearchStudent", properties);
 
                 var response = await client.CreateClient("client").GetStringAsync("api/Students/Search?name=" + SearchString);
-                Student = JsonConvert.DeserializeObject<Models.APIViewModels.StudentResult>(response);
+                Student = JsonSerializer.Deserialize<Models.APIViewModels.StudentResult>(response);
             }
 
             return Page();

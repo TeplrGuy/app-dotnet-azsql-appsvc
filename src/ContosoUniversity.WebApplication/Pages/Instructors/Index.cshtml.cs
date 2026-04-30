@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -19,7 +19,7 @@ namespace ContosoUniversity.WebApplication.Pages.Instructors
         public async Task OnGetAsync(int? id, int? courseID, int? PageNumber)
         {
             var response = await client.CreateClient("client").GetStringAsync("api/Instructors?page=" + (PageNumber ?? 1).ToString());
-            Instructor = JsonConvert.DeserializeObject<Models.APIViewModels.InstructorResult>(response);
+            Instructor = JsonSerializer.Deserialize<Models.APIViewModels.InstructorResult>(response);
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -25,7 +25,7 @@ namespace ContosoUniversity.WebApplication.Pages.Courses
             }
 
             var response = await client.CreateClient("client").GetStringAsync("api/Courses/" + id);
-            Course = JsonConvert.DeserializeObject<Models.APIViewModels.Course>(response);
+            Course = JsonSerializer.Deserialize<Models.APIViewModels.Course>(response);
 
             if (Course == null)
             {

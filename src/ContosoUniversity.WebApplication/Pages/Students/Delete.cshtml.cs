@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -30,7 +30,7 @@ namespace ContosoUniversity.WebApplication.Pages.Students
             }
 
             var response = await client.CreateClient("client").GetStringAsync("api/Students/" + id);
-            Student = JsonConvert.DeserializeObject<Models.APIViewModels.Student>(response);
+            Student = JsonSerializer.Deserialize<Models.APIViewModels.Student>(response);
 
             if (Student == null)
             {

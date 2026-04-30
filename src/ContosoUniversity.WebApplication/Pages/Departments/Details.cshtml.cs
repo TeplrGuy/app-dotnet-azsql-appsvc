@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -25,7 +25,7 @@ namespace ContosoUniversity.WebApplication.Pages.Departments
             }
 
             var response = await client.CreateClient("client").GetStringAsync("api/Departments/" + id);
-            Department = JsonConvert.DeserializeObject<Models.APIViewModels.Department>(response);
+            Department = JsonSerializer.Deserialize<Models.APIViewModels.Department>(response);
 
             if (Department == null)
             {

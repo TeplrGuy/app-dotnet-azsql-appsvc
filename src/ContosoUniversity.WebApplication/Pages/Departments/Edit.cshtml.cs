@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +28,7 @@ namespace ContosoUniversity.WebApplication.Pages.Departments
             }
 
             var response = await client.CreateClient("client").GetStringAsync("api/Departments/" + id);
-            Department = JsonConvert.DeserializeObject<Models.APIViewModels.Department>(response);
+            Department = JsonSerializer.Deserialize<Models.APIViewModels.Department>(response);
 
             if (Department == null)
             {
@@ -36,7 +36,7 @@ namespace ContosoUniversity.WebApplication.Pages.Departments
             }
 
             var responseI = await client.CreateClient("client").GetStringAsync("api/Instructors");
-            var i = JsonConvert.DeserializeObject<Models.APIViewModels.InstructorResult>(responseI);
+            var i = JsonSerializer.Deserialize<Models.APIViewModels.InstructorResult>(responseI);
             ViewData["InstructorID"] = new SelectList(i.Instructors, "ID", "FullName");
 
             return Page();
@@ -49,7 +49,7 @@ namespace ContosoUniversity.WebApplication.Pages.Departments
                 return Page();
             }
 
-            var response = await client.CreateClient("client").PutAsync("api/Departments/" + id, new StringContent(JsonConvert.SerializeObject(Department), Encoding.UTF8, "application/json"));
+            var response = await client.CreateClient("client").PutAsync("api/Departments/" + id, new StringContent(JsonSerializer.Serialize(Department), Encoding.UTF8, "application/json"));
 
             if (response.IsSuccessStatusCode)
                 return RedirectToPage("./Index");

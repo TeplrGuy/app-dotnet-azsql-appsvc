@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +40,7 @@ namespace ContosoUniversity.WebApplication.Pages.Instructors
                 return Page();
             }
 
-            var response = await client.CreateClient("client").PostAsync("api/Instructors", new StringContent(JsonConvert.SerializeObject(Instructor), Encoding.UTF8, "application/json"));
+            var response = await client.CreateClient("client").PostAsync("api/Instructors", new StringContent(JsonSerializer.Serialize(Instructor), Encoding.UTF8, "application/json"));
 
             if (response.IsSuccessStatusCode)
                 return RedirectToPage("./Index");

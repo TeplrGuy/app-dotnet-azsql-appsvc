@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ContosoUniversity.CodedUITest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b7ba5c5cc338ffd31d53ee45d3a7c80acddcbbc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0716ee7262eff2c268ebb72097ceb93e0fc83536")]
 [assembly: System.Reflection.AssemblyProductAttribute("ContosoUniversity.CodedUITest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ContosoUniversity.CodedUITest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="light" data-light-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Copilot for Application Modernization &mdash; Developer Session Guide</title>
+  <link href="https://unpkg.com/@primer/css@21/dist/primer.css" rel="stylesheet" />
+  <style>
+    :root {
+      --brand-copilot: #6e40c9;
+      --brand-copilot-dark: #553098;
+      --brand-modern: #0078d4;
+      --brand-modern-dark: #005a9e;
+      --brand-speckit: #2da44e;
+      --brand-speckit-dark: #1a7f37;
+      --brand-warning: #9a6700;
+      --brand-danger: #cf222e;
+      --brand-net10: #512bd4;
+      --hero-gradient: linear-gradient(135deg, #0d1117 0%, #161b22 40%, #1c2333 100%);
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; margin: 0; scroll-behavior: smooth; }
+    .hero { background: var(--hero-gradient); color: #f0f6fc; padding: 80px 0 64px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(81,43,212,0.2) 0%, transparent 70%); border-radius: 50%; }
+    .hero h1 { font-size: 42px; font-weight: 800; line-height: 1.1; max-width: 900px; position: relative; }
+    .hero h1 .highlight { color: var(--brand-copilot); }
+    .hero .subtitle { font-size: 18px; color: #8b949e; max-width: 820px; margin-top: 16px; line-height: 1.6; }
+    .hero .badge-row { margin-top: 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .section { padding: 48px 0; }
+    .section-alt { background-color: #f6f8fa; }
+    .section-title { font-size: 30px; font-weight: 700; margin-bottom: 8px; }
+    .section-lead { font-size: 17px; color: #656d76; margin-bottom: 32px; max-width: 820px; line-height: 1.6; }
+    .feature-card { border: 1px solid #d0d7de; border-radius: 12px; padding: 24px; height: 100%; transition: box-shadow 0.2s; background: #fff; }
+    .feature-card:hover { border-color: var(--brand-copilot); box-shadow: 0 4px 12px rgba(110,64,201,0.12); }
+    .feature-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #656d76; line-height: 1.5; }
+    .code-block { background: #0d1117; border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+    .code-block code { color: #f0f6fc; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 13px; line-height: 1.6; white-space: pre; }
+    .callout { border-left: 4px solid var(--brand-copilot); background: #f5f0ff; border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0; }
+    .callout p { font-size: 15px; line-height: 1.6; color: #24292f; margin: 0; }
+    .callout strong { color: var(--brand-copilot-dark); }
+    .callout-blue { border-left-color: var(--brand-modern); background: #ddf4ff; }
+    .callout-blue strong { color: var(--brand-modern-dark); }
+    .callout-warn { border-left-color: var(--brand-warning); background: #fff8c5; }
+    .callout-warn strong { color: var(--brand-warning); }
+    .callout-danger { border-left-color: var(--brand-danger); background: #ffebe9; }
+    .callout-success { border-left-color: var(--brand-speckit); background: #dafbe1; }
+    .callout-success strong { color: var(--brand-speckit-dark); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+    @media (max-width: 768px) { .grid-2, .grid-3, .grid-4, .grid-6 { grid-template-columns: 1fr; } .hero h1 { font-size: 28px; } }
+    .top-nav { background: #0d1117; border-bottom: 1px solid #30363d; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+    .top-nav a { color: #f0f6fc; text-decoration: none; font-size: 13px; font-weight: 500; padding: 6px 10px; border-radius: 6px; }
+    .top-nav a:hover { background: #21262d; }
+    .nav-inner { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .nav-logo { font-weight: 700; font-size: 15px; margin-right: 12px; }
+    .footer { background: #0d1117; color: #8b949e; padding: 40px 0; }
+    .footer a { color: var(--brand-copilot); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    table.gov-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
+    table.gov-table th { background: #f6f8fa; border-bottom: 2px solid #d0d7de; padding: 12px; text-align: left; font-weight: 600; }
+    table.gov-table td { padding: 12px; border-bottom: 1px solid #d0d7de; color: #656d76; }
+    table.gov-table tr:hover { background: #f6f8fa; }
+    .agenda-step { display: flex; gap: 16px; padding: 16px; border: 1px solid #d0d7de; border-radius: 8px; margin-bottom: 12px; background: #fff; align-items: flex-start; }
+    .agenda-step:hover { border-color: var(--brand-copilot); }
+    .agenda-time { background: var(--brand-copilot); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 16px; white-space: nowrap; min-width: 56px; text-align: center; margin-top: 2px; }
+    .agenda-time.modern { background: var(--brand-modern); }
+    .agenda-time.speckit { background: var(--brand-speckit); }
+    .agenda-time.net { background: var(--brand-net10); }
+    .agenda-time.qa { background: #656d76; }
+    .agenda-content h4 { font-size: 15px; margin: 0 0 4px; }
+    .agenda-content p { font-size: 13px; color: #656d76; margin: 0; line-height: 1.5; }
+    .demo-tag { display: inline-block; background: #ddf4ff; color: var(--brand-modern); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px; margin-left: 8px; }
+    .demo-tag.live { background: #ffebe9; color: var(--brand-danger); }
+    .phase-flow { display: flex; align-items: center; gap: 0; margin: 32px 0; flex-wrap: wrap; }
+    .phase-item { background: #fff; border: 2px solid #d0d7de; border-radius: 12px; padding: 16px 20px; text-align: center; min-width: 140px; position: relative; }
+    .phase-item.active { border-color: var(--brand-net10); background: #f5f0ff; }
+    .phase-item.future { border-color: #d0d7de; opacity: 0.6; }
+    .phase-item h4 { font-size: 13px; margin: 0 0 4px; font-weight: 700; }
+    .phase-item p { font-size: 11px; margin: 0; color: #656d76; }
+    .phase-arrow { font-size: 24px; color: #d0d7de; padding: 0 8px; }
+    .phase-arrow.active { color: var(--brand-net10); }
+    .timeline-bar { display: flex; margin: 32px 0; border-radius: 8px; overflow: hidden; height: 40px; }
+    .timeline-segment { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="top-nav"><div class="container-xl px-3"><div class="nav-inner">
+  <span class="nav-logo">&#x1F680; Developer Session Guide</span>
+  <a href="#agenda">Agenda</a>
+  <a href="#overview">Modernization</a>
+  <a href="#story">The Story</a>
+  <a href="#speckit">spec-kit</a>
+  <a href="#demo">Live Demo</a>
+  <a href="#modernize-ext">Extension</a>
+  <a href="#next-steps">Next Steps</a>
+</div></div></nav>
+
+<!-- Hero -->
+<section class="hero"><div class="container-xl px-3">
+  <p style="font-size:13px; text-transform:uppercase; letter-spacing:2px; color:#8b949e; margin-bottom:12px; font-weight:600;">Hands-On Developer Session &mdash; 2026</p>
+  <h1>GitHub Copilot for <span class="highlight">Application Modernization</span></h1>
+  <p class="subtitle">Accelerate legacy modernization with AI-assisted refactoring. Explore how GitHub Copilot supports .NET migrations, framework upgrades, dependency updates, and architectural transformation &mdash; from .NET 6 to .NET 10 with confidence.</p>
+  <div class="badge-row">
+    <span class="Label Label--accent">GitHub Copilot</span>
+    <span class="Label Label--info">.NET 6 &rarr; .NET 10</span>
+    <span class="Label Label--success">spec-kit SDD</span>
+    <span class="Label Label--attention">Phased Migration</span>
+    <span class="Label Label--done">Agent Mode</span>
+    <span class="Label Label--danger">Live Demo</span>
+  </div>
+</div></section>
+
+<!-- ═══ AGENDA ═══ -->
+<section id="agenda" class="section">
+<div class="container-xl px-3">
+  <h2 class="section-title">Session Agenda &mdash; 60 Minutes</h2>
+  <p class="section-lead">Two presenters, one story: modernize legacy .NET applications with AI assistance. From guidance to execution. Questions welcome in chat throughout.</p>
+
+  <div class="timeline-bar">
+    <div class="timeline-segment" style="width:8%; background: var(--brand-modern);">5 min</div>
+    <div class="timeline-segment" style="width:8%; background: var(--brand-modern); opacity:0.7;">5 min</div>
+    <div class="timeline-segment" style="width:34%; background: var(--brand-speckit);">20 min</div>
+    <div class="timeline-segment" style="width:50%; background: var(--brand-net10);">30 min</div>
+  </div>
+
+  <div style="max-width:720px;">
+    <div class="agenda-step">
+      <span class="agenda-time modern">5 min</span>
+      <div class="agenda-content">
+        <h4>1. App Modernization Overview</h4>
+        <p>Microsoft's guidance: the modernization lifecycle, the 6 Rs framework, and why .NET upgrades are the foundation for cloud-native transformation.</p>
+      </div>
+    </div>
+    <div class="agenda-step">
+      <span class="agenda-time modern">5 min</span>
+      <div class="agenda-content">
+        <h4>2. Our Migration Story &mdash; Why .NET 10 First</h4>
+        <p>Context: We want to modernize the UI, but first we must upgrade the codebase from .NET 6 to .NET 10. Phased approach explained.</p>
+      </div>
+    </div>
+    <div class="agenda-step">
+      <span class="agenda-time speckit">20 min</span>
+      <div class="agenda-content">
+        <h4>3. spec-kit for Phased Modernization <span class="demo-tag live">Live Demo</span></h4>
+        <p>Using spec-kit to break the .NET 6 &rarr; .NET 10 migration into structured phases with specifications, plans, and tasks &mdash; all AI-assisted.</p>
+      </div>
+    </div>
+    <div class="agenda-step">
+      <span class="agenda-time net">30 min</span>
+      <div class="agenda-content">
+        <h4>4. GitHub Copilot Modernize Extension <span class="demo-tag live">Live Demo</span></h4>
+        <p><em>(Colleague)</em> &mdash; The <code>@modernize-dotnet</code> agent: automated assessment, planning, and execution for .NET upgrades with built-in skills and deep-dive scenarios.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ═══ APP MODERNIZATION OVERVIEW ═══ -->
+<section id="overview" class="section section-alt">
+<div class="container-xl px-3">
+  <h2 class="section-title">Application Modernization &mdash; Microsoft Guidance</h2>
+  <p class="section-lead">Application modernization is a continuous cycle of assessment, planning, and execution. Microsoft provides a proven framework to help organizations modernize with confidence.</p>
+
+  <h3 class="h4 mb-3">The 6 Rs of Application Modernization</h3>
+  <div class="grid-6" style="margin-bottom:32px;">
+    <div class="feature-card" style="border-top:4px solid var(--brand-modern); text-align:center; padding:16px;">
+      <h3 style="font-size:14px;">Rehost</h3>
+      <p style="font-size:12px;">Lift &amp; shift to cloud without code changes</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-modern); text-align:center; padding:16px;">
+      <h3 style="font-size:14px;">Replatform</h3>
+      <p style="font-size:12px;">Move to new runtime with minimal changes</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-net10); text-align:center; padding:16px; border:2px solid var(--brand-net10);">
+      <h3 style="font-size:14px;">&#x2B50; Refactor</h3>
+      <p style="font-size:12px;">Upgrade code and architecture for modern frameworks</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-modern); text-align:center; padding:16px;">
+      <h3 style="font-size:14px;">Rebuild</h3>
+      <p style="font-size:12px;">Start over when costs outweigh benefits</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid #656d76; text-align:center; padding:16px;">
+      <h3 style="font-size:14px;">Retire</h3>
+      <p style="font-size:12px;">Decommission apps no longer needed</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid #656d76; text-align:center; padding:16px;">
+      <h3 style="font-size:14px;">Retain</h3>
+      <p style="font-size:12px;">Keep as-is when not ready</p>
+    </div>
+  </div>
+
+  <h3 class="h4 mb-3">Modernization Lifecycle</h3>
+  <table class="gov-table">
+    <thead><tr><th>Phase</th><th>Activities</th><th>Key Outcomes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Assess</strong></td><td>Evaluate IT assets, identify legacy systems, technical debt</td><td>Application inventory, risk profile</td></tr>
+      <tr><td><strong>Plan</strong></td><td>Choose modernization strategy (6 Rs), prioritize by ROI</td><td>Migration roadmap, effort estimates</td></tr>
+      <tr><td><strong>Launch</strong></td><td>Execute proof of concept, validate strategy</td><td>Validated approach, stakeholder buy-in</td></tr>
+      <tr><td><strong>Foundation</strong></td><td>End-to-end modernization, cloud-first PaaS adoption</td><td>Modern runtime, CI/CD pipelines</td></tr>
+      <tr><td><strong>Expand</strong></td><td>Managed services, API-first, performance tuning</td><td>Cloud-native capabilities</td></tr>
+      <tr><td><strong>Optimize</strong></td><td>Continuous improvement, cost optimization, DevSecOps</td><td>Lower TCO, higher reliability</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-blue">
+    <p><strong>Our Approach: Refactor</strong> &mdash; We're upgrading our .NET 6 application to .NET 10 LTS. This is the "Refactor" strategy: modernizing the framework and dependencies to enable future UI innovation while maintaining behavioral equivalence.</p>
+  </div>
+</div></section>
+
+<!-- ═══ THE MIGRATION STORY ═══ -->
+<section id="story" class="section">
+<div class="container-xl px-3">
+  <h2 class="section-title">The Migration Story &mdash; Why .NET 10 First</h2>
+  <p class="section-lead">We want to modernize the frontend UI, but the codebase runs on .NET 6 (end of support). The first step is upgrading to .NET 10 LTS &mdash; breaking the work into manageable phases before tackling UI changes.</p>
+
+  <h3 class="h4 mb-3">The Big Picture: Phased Modernization</h3>
+  <div class="phase-flow">
+    <div class="phase-item active">
+      <h4 style="color: var(--brand-net10);">Phase 1</h4>
+      <p><strong>.NET 6 &rarr; .NET 10</strong></p>
+      <p>Framework upgrade</p>
+      <p style="font-size:10px; color: var(--brand-danger); font-weight:600;">NOW</p>
+    </div>
+    <span class="phase-arrow active">&rarr;</span>
+    <div class="phase-item active">
+      <h4 style="color: var(--brand-net10);">Phase 2</h4>
+      <p><strong>Dependencies</strong></p>
+      <p>NuGet + EF Core 10</p>
+      <p style="font-size:10px; color: var(--brand-danger); font-weight:600;">NOW</p>
+    </div>
+    <span class="phase-arrow active">&rarr;</span>
+    <div class="phase-item active">
+      <h4 style="color: var(--brand-net10);">Phase 3</h4>
+      <p><strong>Infrastructure</strong></p>
+      <p>Docker + Bicep + CI/CD</p>
+      <p style="font-size:10px; color: var(--brand-danger); font-weight:600;">NOW</p>
+    </div>
+    <span class="phase-arrow">&rarr;</span>
+    <div class="phase-item future">
+      <h4>Phase 4</h4>
+      <p><strong>UI Modernization</strong></p>
+      <p>Modern frontend</p>
+      <p style="font-size:10px; color: #656d76;">NEXT SPRING</p>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:32px;">
+    <div class="feature-card" style="border-left:4px solid var(--brand-danger);">
+      <h3>&#x1F534; Current State: .NET 6</h3>
+      <p><strong>End of support</strong> &mdash; No more security patches</p>
+      <p>Contoso University MVC app with 4 projects: Razor Pages frontend, Web API with EF Core, MSTest unit tests, Selenium UI tests. Deployed on Azure App Service.</p>
+    </div>
+    <div class="feature-card" style="border-left:4px solid var(--brand-speckit);">
+      <h3>&#x1F7E2; Target State: .NET 10 LTS</h3>
+      <p><strong>Long-term support</strong> &mdash; 3 years of security patches</p>
+      <p>Same application, modern runtime. C# 14, improved performance, post-quantum crypto, NativeAOT. Foundation for UI modernization next spring.</p>
+    </div>
+  </div>
+
+  <h3 class="h4 mb-3">Why Upgrade Before UI Changes?</h3>
+  <div class="grid-3">
+    <div class="feature-card">
+      <h3>&#x1F6E1;&#xFE0F; Security</h3>
+      <p>.NET 6 is <strong>end of life</strong>. No more security patches means growing vulnerability exposure. .NET 10 LTS provides 3 years of support.</p>
+    </div>
+    <div class="feature-card">
+      <h3>&#x26A1; Performance</h3>
+      <p>.NET 10 delivers JIT improvements, better async, and NativeAOT enhancements. A faster runtime means a faster UI &mdash; before writing any frontend code.</p>
+    </div>
+    <div class="feature-card">
+      <h3>&#x1F9F1; Foundation</h3>
+      <p>Modern UI frameworks (Blazor United, .NET Aspire) require .NET 8+. Upgrading now unlocks the entire ecosystem for the UI work next spring.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ═══ SPEC-KIT FOR MODERNIZATION ═══ -->
+<section id="speckit" class="section section-alt">
+<div class="container-xl px-3">
+  <h2 class="section-title">spec-kit for Phased Modernization</h2>
+  <p class="section-lead">Stop ad-hoc prompting. Use <a href="https://speckit.org/" target="_blank">spec-kit</a> to break complex migrations into structured, reviewable phases &mdash; specifications that become executable with AI assistance.</p>
+
+  <div class="callout callout-success">
+    <p><strong>Why spec-kit for migrations?</strong> A .NET 6 &rarr; .NET 10 upgrade touches every project file, dozens of NuGet packages, Docker images, infrastructure templates, and CI/CD pipelines. spec-kit breaks this into structured phases with clear acceptance criteria &mdash; no work gets lost between sessions.</p>
+  </div>
+
+  <h3 class="h4 mb-3">Copilot Agent Skills &mdash; Ensuring Best Practices</h3>
+  <p style="font-size:15px; color:#656d76; margin-bottom:16px;">Alongside spec-kit, we use <strong>Copilot agent skills</strong> to ensure the migration follows .NET best practices, uses official Microsoft documentation, and applies proven upgrade patterns.</p>
+  <div class="grid-3" style="margin-bottom:32px;">
+    <div class="feature-card" style="border-top:4px solid var(--brand-modern);">
+      <h3>&#x1F4DA; Microsoft Docs Skill</h3>
+      <p>Queries official Microsoft Learn documentation in real-time. Ensures code changes align with the latest .NET 10 guidance, breaking change advisories, and migration tutorials.</p>
+      <p style="font-size:11px; margin-top:8px;"><a href="https://awesome-copilot.github.com/skills/?q=docs#file=skills%2Fmicrosoft-docs%2FSKILL.md" target="_blank">awesome-copilot/microsoft-docs</a></p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-speckit);">
+      <h3>&#x2705; .NET Best Practices Skill</h3>
+      <p>Validates generated code against C#/.NET best practices: async patterns, dependency injection, nullable references, naming conventions, and SOLID principles.</p>
+      <p style="font-size:11px; margin-top:8px;"><a href="https://awesome-copilot.github.com/skills/?q=dotne#file=skills%2Fdotnet-best-practices%2FSKILL.md" target="_blank">awesome-copilot/dotnet-best-practices</a></p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-net10);">
+      <h3>&#x1F504; .NET Upgrade Skill</h3>
+      <p>Purpose-built for framework upgrades. Handles target framework changes, NuGet compatibility, breaking change detection, and validation gates for each upgrade step.</p>
+      <p style="font-size:11px; margin-top:8px;"><a href="https://awesome-copilot.github.com/skills/?q=dotnet+upgrade#file=skills%2Fdotnet-upgrade%2FSKILL.md" target="_blank">awesome-copilot/dotnet-upgrade</a></p>
+    </div>
+  </div>
+
+  <div class="callout callout-blue">
+    <p><strong>How skills work with spec-kit:</strong> When Copilot agent mode executes a task from the spec, it automatically invokes these skills to look up documentation, validate patterns, and apply upgrade-specific logic. The result: code that follows official guidance without manual research.</p>
+  </div>
+
+  <h3 class="h4 mb-3">The spec-kit Workflow for This Migration</h3>
+  <div class="grid-4" style="margin-bottom:32px;">
+    <div class="feature-card" style="border-top:4px solid var(--brand-speckit); text-align: center;">
+      <h3>1&#xFE0F;&#x20E3; Specify</h3>
+      <p><code>/speckit.specify</code></p>
+      <p style="font-size:12px;">Define WHAT to upgrade: target frameworks, packages, infrastructure</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-speckit); text-align: center;">
+      <h3>2&#xFE0F;&#x20E3; Plan</h3>
+      <p><code>/speckit.plan</code></p>
+      <p style="font-size:12px;">Architecture decisions: upgrade strategy (bottom-up), risk mitigation</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-speckit); text-align: center;">
+      <h3>3&#xFE0F;&#x20E3; Tasks</h3>
+      <p><code>/speckit.tasks</code></p>
+      <p style="font-size:12px;">Ordered task list with validation criteria per task</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-speckit); text-align: center;">
+      <h3>4&#xFE0F;&#x20E3; Implement</h3>
+      <p><code>/speckit.implement</code></p>
+      <p style="font-size:12px;">Execute tasks with AI &mdash; Copilot agent mode does the heavy lifting</p>
+    </div>
+  </div>
+
+  <h3 class="h4 mb-3">How We Applied spec-kit to .NET 6 &rarr; .NET 10</h3>
+  <div class="code-block"><code>// Step 1: Specify the migration scope
+/speckit.specify Upgrade Contoso University from .NET 6 to .NET 10 LTS.
+The solution has 4 projects: Razor Pages frontend, Web API with EF Core,
+MSTest unit tests, and Selenium UI tests. Must maintain backward
+compatibility with existing Azure SQL database. Deployed to Azure App Service.
+
+// Step 2: Plan the phased approach
+/speckit.plan Using bottom-up upgrade strategy. Phase 1: target frameworks
+and SDK. Phase 2: NuGet packages (EF Core 10, ASP.NET Core 10). Phase 3:
+Dockerfiles and Bicep infrastructure. Each phase has its own validation gate.
+
+// Step 3: Generate tasks with acceptance criteria
+/speckit.tasks
+
+// Step 4: Execute with Copilot agent mode
+/speckit.implement</code></div>
+
+  <h3 class="h4 mt-4 mb-3">Output: Structured Spec Files</h3>
+  <table class="gov-table">
+    <thead><tr><th>File</th><th>Purpose</th><th>Contents</th></tr></thead>
+    <tbody>
+      <tr><td><code>spec.md</code></td><td>Feature specification</td><td>User stories with acceptance criteria, test scenarios</td></tr>
+      <tr><td><code>plan.md</code></td><td>Implementation plan</td><td>Architecture decisions, upgrade strategy, risk mitigations</td></tr>
+      <tr><td><code>tasks.md</code></td><td>Task breakdown</td><td>Ordered tasks with validation commands per task</td></tr>
+      <tr><td><code>research.md</code></td><td>Breaking changes</td><td>.NET 10 breaking changes relevant to this codebase</td></tr>
+      <tr><td><code>data-model.md</code></td><td>Schema reference</td><td>EF Core model and migration compatibility</td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid-2" style="margin-top:24px;">
+    <div class="feature-card">
+      <h3>&#x1F4CB; Without spec-kit</h3>
+      <ul style="font-size:13px; line-height:1.8; color:#656d76; padding-left:16px;">
+        <li>Ad-hoc prompts with no memory between sessions</li>
+        <li>No clear phasing &mdash; work gets tangled</li>
+        <li>No acceptance criteria &mdash; "is it done?"</li>
+        <li>Context lost when switching between tasks</li>
+        <li>Hard to review or hand off to teammates</li>
+      </ul>
+    </div>
+    <div class="feature-card" style="border:2px solid var(--brand-speckit);">
+      <h3>&#x1F680; With spec-kit</h3>
+      <ul style="font-size:13px; line-height:1.8; color:#656d76; padding-left:16px;">
+        <li>Specifications persist across sessions</li>
+        <li>Clear phases with validation gates</li>
+        <li>Each task has explicit acceptance criteria</li>
+        <li>AI agent picks up exactly where you left off</li>
+        <li>PR-reviewable specs committed to the repo</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- ═══ LIVE DEMO ═══ -->
+<section id="demo" class="section">
+<div class="container-xl px-3">
+  <h2 class="section-title">Live Demo: .NET 6 &rarr; .NET 10 with spec-kit <span class="demo-tag live">Live</span></h2>
+  <p class="section-lead">Watch spec-kit and GitHub Copilot agent mode work together to execute a phased .NET framework upgrade on the Contoso University application.</p>
+
+  <h3 class="h4 mb-3">What the Demo Covers</h3>
+  <div class="grid-3" style="margin-bottom:32px;">
+    <div class="feature-card" style="border-top:4px solid var(--brand-speckit);">
+      <h3>&#x1F4DD; Phase 1: Spec &amp; Plan</h3>
+      <p>Show the spec files generated by spec-kit. Walk through the structured plan, user stories, and task breakdown for the .NET 10 upgrade.</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-copilot);">
+      <h3>&#x1F916; Phase 2: Agent Execution</h3>
+      <p>Copilot agent mode reads the spec, upgrades target frameworks, updates NuGet packages, and fixes breaking changes &mdash; autonomously.</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-net10);">
+      <h3>&#x2705; Phase 3: Validation</h3>
+      <p><code>dotnet build</code> &rarr; <code>dotnet test</code> &rarr; all green. The migration maintains behavioral equivalence with the .NET 6 version.</p>
+    </div>
+  </div>
+
+  <h3 class="h4 mb-3">Migration Tasks (Executed by Copilot)</h3>
+  <table class="gov-table">
+    <thead><tr><th>#</th><th>Task</th><th>Validation</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Update <code>global.json</code> to .NET 10 SDK</td><td><code>dotnet --version</code> shows 10.x</td></tr>
+      <tr><td>2</td><td>Update all <code>TargetFramework</code> to <code>net10.0</code></td><td><code>dotnet build</code> succeeds</td></tr>
+      <tr><td>3</td><td>Upgrade EF Core + ASP.NET Core packages to 10.x</td><td><code>dotnet restore</code> no warnings</td></tr>
+      <tr><td>4</td><td>Fix breaking changes (API obsoletions, JSON strictness)</td><td><code>dotnet build</code> zero errors</td></tr>
+      <tr><td>5</td><td>Run test suite on .NET 10</td><td><code>dotnet test</code> all pass</td></tr>
+      <tr><td>6</td><td>Update Dockerfiles to .NET 10 base images</td><td><code>docker build</code> succeeds</td></tr>
+      <tr><td>7</td><td>Update Bicep runtime stack to .NET 10</td><td><code>az bicep build</code> validates</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p><strong>Key Takeaway:</strong> spec-kit provides the structure (what to do, in what order, with what criteria). Copilot agent mode provides the execution (autonomous code changes with self-correction). Together, they make complex migrations manageable and reviewable.</p>
+  </div>
+</div></section>
+
+<!-- ═══ MODERNIZE-DOTNET EXTENSION ═══ -->
+<section id="modernize-ext" class="section section-alt">
+<div class="container-xl px-3">
+  <h2 class="section-title">GitHub Copilot Modernize Extension</h2>
+  <p class="section-lead"><em>(Colleague's Demo)</em> &mdash; The <code>@modernize-dotnet</code> agent is purpose-built for .NET upgrades with 30+ specialized skills, automated assessment, and a learning agent that improves as you use it.</p>
+
+  <h3 class="h4 mb-3">Three-Stage Workflow</h3>
+  <div class="grid-3" style="margin-bottom:32px;">
+    <div class="feature-card" style="border-top:4px solid var(--brand-modern);">
+      <h3>&#x1F50D; Assessment</h3>
+      <p>Examines project structure, dependencies, and code patterns. Identifies upgrade scope, breaking changes, and risk areas. Outputs <code>assessment.md</code>.</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-modern);">
+      <h3>&#x1F4CB; Planning</h3>
+      <p>Converts assessment into a detailed upgrade plan. Documents strategies, dependency paths, and risk mitigations. Outputs <code>plan.md</code>.</p>
+    </div>
+    <div class="feature-card" style="border-top:4px solid var(--brand-modern);">
+      <h3>&#x2699;&#xFE0F; Execution</h3>
+      <p>Breaks plan into sequential tasks with validation. Each task is a single change with a success criterion. Creates Git commits for rollback.</p>
+    </div>
+  </div>
+
+  <h3 class="h4 mb-3">Supported Scenarios</h3>
+  <table class="gov-table">
+    <thead><tr><th>Scenario</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><strong>.NET Version Upgrade</strong></td><td>Upgrade from any .NET Framework/.NET Core/.NET 5+ to .NET 8, 9, 10 or later</td></tr>
+      <tr><td><strong>SDK-Style Conversion</strong></td><td>Convert legacy project format to modern SDK-style .csproj</td></tr>
+      <tr><td><strong>Newtonsoft.Json Upgrade</strong></td><td>Replace Newtonsoft.Json with System.Text.Json</td></tr>
+      <tr><td><strong>SqlClient Upgrade</strong></td><td>Upgrade System.Data.SqlClient to Microsoft.Data.SqlClient</td></tr>
+      <tr><td><strong>Azure Functions</strong></td><td>Upgrade from in-process to isolated worker model</td></tr>
+      <tr><td><strong>Semantic Kernel</strong></td><td>Upgrade SK Agents to Microsoft Agent Framework</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h4 mt-4 mb-3">Where to Use It</h3>
+  <div class="grid-4">
+    <div class="feature-card" style="text-align:center; padding:16px;">
+      <h3 style="font-size:14px;">Visual Studio</h3>
+      <p style="font-size:12px;">Right-click &rarr; Modernize<br>or <code>@Modernize</code> in chat</p>
+    </div>
+    <div class="feature-card" style="text-align:center; padding:16px;">
+      <h3 style="font-size:14px;">VS Code</h3>
+      <p style="font-size:12px;"><code>@modernize-dotnet</code><br>in Copilot Chat</p>
+    </div>
+    <div class="feature-card" style="text-align:center; padding:16px;">
+      <h3 style="font-size:14px;">Copilot CLI</h3>
+      <p style="font-size:12px;"><code>@modernize-dotnet</code><br>in terminal</p>
+    </div>
+    <div class="feature-card" style="text-align:center; padding:16px;">
+      <h3 style="font-size:14px;">GitHub.com</h3>
+      <p style="font-size:12px;">Coding agent<br>on pull requests</p>
+    </div>
+  </div>
+
+  <div class="callout callout-blue" style="margin-top:24px;">
+    <p><strong>Customer Impact:</strong> "Instead of spending week(s) upgrading and testing several projects from .NET 6 to .NET 8, we got it done within a few hours with GitHub Copilot." &mdash; <em>Microsoft Teams</em></p>
+  </div>
+</div></section>
+
+<!-- ═══ NEXT STEPS ═══ -->
+<section id="next-steps" class="section">
+<div class="container-xl px-3">
+  <h2 class="section-title">Next Steps</h2>
+  <p class="section-lead">Two complementary approaches to .NET modernization &mdash; choose based on your team's needs.</p>
+
+  <div class="grid-2" style="margin-bottom:32px;">
+    <div class="feature-card">
+      <h3>&#x1F7E2; spec-kit Approach (Shown Today)</h3>
+      <p style="font-size:14px; margin-bottom:12px;"><strong>Best for:</strong> Teams wanting full control, phased rollout, and structured specs committed to the repo.</p>
+      <table class="gov-table" style="font-size:13px;">
+        <tbody>
+          <tr><td>Install spec-kit</td><td><code>uv tool install specify-cli</code></td></tr>
+          <tr><td>Initialize project</td><td><code>specify init . --ai copilot</code></td></tr>
+          <tr><td>Define spec</td><td><code>/speckit.specify</code></td></tr>
+          <tr><td>Generate plan</td><td><code>/speckit.plan</code></td></tr>
+          <tr><td>Execute</td><td><code>/speckit.implement</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="feature-card">
+      <h3>&#x1F535; @modernize-dotnet Approach</h3>
+      <p style="font-size:14px; margin-bottom:12px;"><strong>Best for:</strong> Teams wanting a purpose-built agent with 30+ specialized .NET upgrade skills and automated assessment.</p>
+      <table class="gov-table" style="font-size:13px;">
+        <tbody>
+          <tr><td>Install extension</td><td>VS Code or Visual Studio</td></tr>
+          <tr><td>Start assessment</td><td><code>@modernize-dotnet assess</code></td></tr>
+          <tr><td>Review plan</td><td><code>@modernize-dotnet plan</code></td></tr>
+          <tr><td>Execute</td><td><code>@modernize-dotnet upgrade</code></td></tr>
+          <tr><td>Validate</td><td>Auto-runs build + tests</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="callout callout-warn">
+    <p><strong>Remember the Story:</strong> Upgrading from .NET 6 to .NET 10 is <strong>Phase 1</strong> of our modernization journey. This unblocks the UI modernization work planned for next spring. Both approaches (spec-kit and @modernize-dotnet) can be used together or independently depending on your team's workflow preference.</p>
+  </div>
+
+  <h3 class="h4 mt-4 mb-3">Resources</h3>
+  <table class="gov-table">
+    <thead><tr><th>Resource</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>Azure App Modernization Guidance</td><td><a href="https://learn.microsoft.com/en-us/azure/app-modernization-guidance/" target="_blank">learn.microsoft.com/azure/app-modernization-guidance</a></td></tr>
+      <tr><td>GitHub Copilot Modernize for .NET</td><td><a href="https://learn.microsoft.com/en-us/dotnet/core/porting/github-copilot-app-modernization/overview" target="_blank">learn.microsoft.com/.../github-copilot-app-modernization</a></td></tr>
+      <tr><td>.NET Modernize Platform</td><td><a href="https://dotnet.microsoft.com/en-us/platform/modernize" target="_blank">dotnet.microsoft.com/platform/modernize</a></td></tr>
+      <tr><td>spec-kit (SDD Toolkit)</td><td><a href="https://speckit.org/" target="_blank">speckit.org</a></td></tr>
+      <tr><td>.NET 10 Breaking Changes</td><td><a href="https://learn.microsoft.com/en-us/dotnet/core/compatibility/10.0" target="_blank">learn.microsoft.com/.../compatibility/10.0</a></td></tr>
+    </tbody>
+  </table>
+</div></section>
+
+<!-- Footer -->
+<footer class="footer"><div class="container-xl px-3">
+  <div class="grid-3" style="font-size:13px;">
+    <div>
+      <h4 style="color:#f0f6fc; font-size:14px; margin-bottom:8px;">Microsoft Guidance</h4>
+      <p><a href="https://learn.microsoft.com/en-us/azure/app-modernization-guidance/">App Modernization Guidance</a></p>
+      <p><a href="https://learn.microsoft.com/en-us/dotnet/core/porting/github-copilot-app-modernization/overview">Copilot Modernize Agent</a></p>
+      <p><a href="https://dotnet.microsoft.com/en-us/platform/modernize">.NET Modernize Platform</a></p>
+    </div>
+    <div>
+      <h4 style="color:#f0f6fc; font-size:14px; margin-bottom:8px;">Tools</h4>
+      <p><a href="https://speckit.org/">spec-kit (SDD)</a></p>
+      <p><a href="https://github.com/github/copilot.vim">GitHub Copilot</a></p>
+      <p><a href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10/overview">.NET 10 Overview</a></p>
+    </div>
+    <div>
+      <h4 style="color:#f0f6fc; font-size:14px; margin-bottom:8px;">This Session</h4>
+      <p>Contoso University (.NET 6 &rarr; .NET 10)</p>
+      <p>Phased migration with AI assistance</p>
+      <p>UI modernization planned for Spring 2027</p>
+    </div>
+  </div>
+  <hr style="border-color:#30363d;margin:24px 0;">
+  <p style="font-size:12px;text-align:center;">GitHub Copilot for Application Modernization &mdash; Developer Session Guide &mdash; 2026</p>
+</div></footer>
+
+</body>
+</html>

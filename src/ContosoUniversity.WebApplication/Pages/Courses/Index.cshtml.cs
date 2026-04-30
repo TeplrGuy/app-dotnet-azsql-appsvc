@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Text.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -19,7 +19,7 @@ namespace ContosoUniversity.WebApplication.Pages.Courses
         public async Task OnGetAsync()
         {
             var response = await client.CreateClient("client").GetStringAsync("api/Courses");
-            Course = JsonConvert.DeserializeObject<Models.APIViewModels.CoursesResult>(response);
+            Course = JsonSerializer.Deserialize<Models.APIViewModels.CoursesResult>(response);
         }
     }
 }
