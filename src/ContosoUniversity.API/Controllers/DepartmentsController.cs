@@ -104,7 +104,12 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest("Instructor is required.");
             }
 
-            department.Instructor = _context.Instructors.Find(department.Instructor.ID);
+            var instructorId = department.Instructor.ID;
+            department.Instructor = _context.Instructors.Find(instructorId);
+            if (department.Instructor == null)
+            {
+                return NotFound($"Instructor with ID {instructorId} not found.");
+            }
             _context.Entry(department).State = EntityState.Modified;
 
             try
@@ -140,7 +145,12 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest("Instructor is required.");
             }
 
-            department.Instructor = _context.Instructors.Find(department.Instructor.ID);
+            var instructorId = department.Instructor.ID;
+            department.Instructor = _context.Instructors.Find(instructorId);
+            if (department.Instructor == null)
+            {
+                return NotFound($"Instructor with ID {instructorId} not found.");
+            }
             _context.Departments.Add(department);
             await _context.SaveChangesAsync();
 

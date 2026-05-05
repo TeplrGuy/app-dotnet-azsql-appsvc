@@ -108,7 +108,12 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest("Department is required.");
             }
 
-            course.Department = _context.Departments.Find(course.Department.ID);
+            var departmentId = course.Department.ID;
+            course.Department = _context.Departments.Find(departmentId);
+            if (course.Department == null)
+            {
+                return NotFound($"Department with ID {departmentId} not found.");
+            }
             _context.Entry(course).State = EntityState.Modified;
 
             try
@@ -144,7 +149,12 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest("Department is required.");
             }
 
-            course.Department = _context.Departments.Find(course.Department.ID);
+            var departmentId = course.Department.ID;
+            course.Department = _context.Departments.Find(departmentId);
+            if (course.Department == null)
+            {
+                return NotFound($"Department with ID {departmentId} not found.");
+            }
             _context.Courses.Add(course);
             await _context.SaveChangesAsync();
 
