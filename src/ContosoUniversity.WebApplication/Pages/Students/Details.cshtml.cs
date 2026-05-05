@@ -18,7 +18,7 @@ namespace ContosoUniversity.WebApplication.Pages.Students
             this.client = client;
         }
 
-        public Models.APIViewModels.Student Student { get; set; }
+        public Models.APIViewModels.Student? Student { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

@@ -15,8 +15,8 @@ namespace ContosoUniversity.WebApplication.Pages
         public void OnGet()
         {
             var section = Configuration.GetSection("Infos");
-            ViewData["Ambiente"] = section["Ambiente"].ToString();
-            ViewData["Versao"] = section["Versao"].ToString();
+            ViewData["Ambiente"] = section["Ambiente"] ?? string.Empty;
+            ViewData["Versao"] = section["Versao"] ?? string.Empty;
         }
     }
 }

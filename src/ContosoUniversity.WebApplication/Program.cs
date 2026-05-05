@@ -14,12 +14,12 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 
 if (builder.Configuration["URLAPI"] != null)
 {
-    builder.Services.AddHttpClient("client", client => { client.BaseAddress = new Uri(builder.Configuration["URLAPI"]); });
+    builder.Services.AddHttpClient("client", client => { client.BaseAddress = new Uri(builder.Configuration["URLAPI"]!); });
 }
 else
 {
     var section = builder.Configuration.GetSection("Api");
-    builder.Services.AddHttpClient("client", client => { client.BaseAddress = new Uri(section["Address"]); });
+    builder.Services.AddHttpClient("client", client => { client.BaseAddress = new Uri(section["Address"]!); });
 }
 
 builder.Services.AddRazorPages();
@@ -29,7 +29,10 @@ builder.Services.AddHealthChecks();
 
 if (builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"] != null)
 {
-    builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
+    builder.Services.AddApplicationInsightsTelemetry(options =>
+    {
+        options.ConnectionString = builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"];
+    });
 }
 else
 {

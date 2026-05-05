@@ -18,7 +18,7 @@ namespace ContosoUniversity.WebApplication.Pages.Courses
         }
 
         [BindProperty]
-        public Models.APIViewModels.Course Course { get; set; }
+        public Models.APIViewModels.Course? Course { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -38,7 +38,7 @@ namespace ContosoUniversity.WebApplication.Pages.Courses
             // Select current DepartmentID.
             var response_dep = await client.CreateClient("client").GetStringAsync("api/Departments");
             var dep = JsonConvert.DeserializeObject<Models.APIViewModels.DepartmentResult>(response_dep);
-            ViewData["DepartmentID"] = new SelectList(dep.Departments, "ID", "Name");
+            ViewData["DepartmentID"] = new SelectList(dep?.Departments, "ID", "Name");
 
             return Page();
         }

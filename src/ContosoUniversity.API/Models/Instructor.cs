@@ -12,15 +12,15 @@ namespace ContosoUniversity.API.Models
         public int ID { get; set; }
 
         [StringLength(50)]
-        public string LastName { get; set; }
+        public required string LastName { get; set; }
 
         [StringLength(50)]
-        public string FirstName { get; set; }
+        public required string FirstName { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime HireDate { get; set; }
 
-        public IList<Course> Courses { get; set; }
+        public IList<Course> Courses { get; set; } = new List<Course>();
     }
 }

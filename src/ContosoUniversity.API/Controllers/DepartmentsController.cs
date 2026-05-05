@@ -99,7 +99,7 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest();
             }
 
-            department.Instructor = _context.Instructors.Find(department.Instructor.ID);
+            department.Instructor = _context.Instructors.Find(department.Instructor!.ID);
             _context.Entry(department).State = EntityState.Modified;
 
             try
@@ -130,7 +130,7 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            department.Instructor = _context.Instructors.Find(department.Instructor.ID);
+            department.Instructor = _context.Instructors.Find(department.Instructor!.ID);
             _context.Departments.Add(department);
             await _context.SaveChangesAsync();
 

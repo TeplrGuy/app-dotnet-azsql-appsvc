@@ -21,13 +21,13 @@ namespace ContosoUniversity.WebApplication.Pages.Courses
         {
             var response = await client.CreateClient("client").GetStringAsync("api/Departments");
             var dep = JsonConvert.DeserializeObject<Models.APIViewModels.DepartmentResult>(response);
-            ViewData["DepartmentID"] = new SelectList(dep.Departments, "ID", "Name");
+            ViewData["DepartmentID"] = new SelectList(dep?.Departments, "ID", "Name");
 
             return Page();
         }
 
         [BindProperty]
-        public Models.APIViewModels.Course Course { get; set; }
+        public Models.APIViewModels.Course? Course { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {

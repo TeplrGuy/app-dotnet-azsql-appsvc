@@ -12,16 +12,16 @@ namespace ContosoUniversity.API.Models
         public int ID { get; set; }
 
         [Required]
-        public string LastName { get; set; }
+        public required string LastName { get; set; }
 
         [Required]
-        public string FirstName { get; set; }
+        public required string FirstName { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime EnrollmentDate { get; set; }
 
-        public IEnumerable<StudentCourse> StudentCourse { get; set; }
+        public IEnumerable<StudentCourse> StudentCourse { get; set; } = new List<StudentCourse>();
 
     }
 }

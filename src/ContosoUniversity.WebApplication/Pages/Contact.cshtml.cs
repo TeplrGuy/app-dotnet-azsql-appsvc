@@ -4,7 +4,7 @@ namespace ContosoUniversity.WebApplication.Pages
 {
     public class ContactModel : PageModel
     {
-        public string Message { get; set; }
+        public string Message { get; set; } = string.Empty;
 
         public void OnGet()
         {

@@ -12,7 +12,7 @@ namespace ContosoUniversity.WebApplication.Pages
         private readonly IHttpClientFactory client;
         private readonly ILogger<AboutModel> logger;
 
-        public string Msg { get; set; }
+        public string Msg { get; set; } = string.Empty;
 
         public AboutModel(IHttpClientFactory client, ILogger<AboutModel> logger)
         {
@@ -27,7 +27,7 @@ namespace ContosoUniversity.WebApplication.Pages
             try
             {
 
-                logger.LogInformation("Base Address = " + cli.BaseAddress.ToString());
+                logger.LogInformation("Base Address = " + cli.BaseAddress?.ToString());
 
                 var response = await cli.GetStringAsync("api/Values");
                 logger.LogInformation("Resultado chamada = " + response);

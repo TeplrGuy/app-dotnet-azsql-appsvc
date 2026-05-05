@@ -12,7 +12,7 @@ namespace ContosoUniversity.API.Models
         public int ID { get; set; }
 
         [StringLength(50, MinimumLength = 3)]
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
@@ -22,7 +22,7 @@ namespace ContosoUniversity.API.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime StartDate { get; set; }
 
-        public Instructor Instructor { get; set; }
+        public Instructor? Instructor { get; set; }
 
     }
 }

@@ -29,7 +29,7 @@ namespace ContosoUniversity.WebApplication.Pages.Instructors
         }
 
         [BindProperty]
-        public Models.APIViewModels.Instructor Instructor { get; set; }
+        public Models.APIViewModels.Instructor? Instructor { get; set; }
 
         public async Task<IActionResult> OnPostAsync(string[] selectedCourses)
         {

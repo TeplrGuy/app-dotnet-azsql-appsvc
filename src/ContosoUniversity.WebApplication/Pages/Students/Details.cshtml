@@ -12,25 +12,25 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Student.LastName)
+            @Html.DisplayNameFor(model => model.Student!.LastName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Student.LastName)
+            @Html.DisplayFor(model => model.Student!.LastName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Student.FirstName)
+            @Html.DisplayNameFor(model => model.Student!.FirstName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Student.FirstName)
+            @Html.DisplayFor(model => model.Student!.FirstName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Student.EnrollmentDate)
+            @Html.DisplayNameFor(model => model.Student!.EnrollmentDate)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Student.EnrollmentDate)
+            @Html.DisplayFor(model => model.Student!.EnrollmentDate)
         </dd>  
         <dt>
-            @Html.DisplayNameFor(model => model.Student.Courses)
+            @Html.DisplayNameFor(model => model.Student!.Courses)
         </dt>
         <dd>
             <table class="table">
@@ -39,9 +39,9 @@
                     <th>Credits</th>
                 </tr>
 
-                @if (Model.Student.Courses.Count > 0)
+                @if (Model.Student!.Courses.Count > 0)
                 {
-                    @foreach (var item in Model.Student.Courses)
+                    @foreach (var item in Model.Student!.Courses)
                     {
                         <tr>
                             <td>
@@ -64,6 +64,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Student.Id ">Edit</a> |
+    <a asp-page="./Edit" asp-route-id="@Model.Student!.Id ">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>

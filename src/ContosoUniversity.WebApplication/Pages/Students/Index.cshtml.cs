@@ -13,7 +13,7 @@ namespace ContosoUniversity.WebApplication.Pages.Students
         private readonly IHttpClientFactory client;
         private TelemetryClient telemetry;
 
-        public string CurrentFilter { get; set; }
+        public string? CurrentFilter { get; set; }
 
         public IndexModel(IHttpClientFactory client, TelemetryClient telemetry)
         {
@@ -21,7 +21,7 @@ namespace ContosoUniversity.WebApplication.Pages.Students
             this.telemetry = telemetry;
         }
 
-        public Models.APIViewModels.StudentResult Student { get; set; }
+        public Models.APIViewModels.StudentResult? Student { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id, string SearchString, int? PageNumber)
         {
