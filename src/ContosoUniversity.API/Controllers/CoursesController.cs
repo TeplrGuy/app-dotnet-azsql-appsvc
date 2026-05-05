@@ -36,7 +36,7 @@ namespace ContosoUniversity.API.Controllers
                     Credits = c.Credits,
                     Title = c.Title,
                     Department = new DTO.Department() {
-                        ID = c.Department.ID,
+                        ID = c.Department!.ID,
                         Name = c.Department.Name,
                         Budget = c.Department.Budget,
                         StartDate = c.Department.StartDate
@@ -73,7 +73,7 @@ namespace ContosoUniversity.API.Controllers
                 Title = course.Title,
                 Department = new DTO.Department()
                 {
-                    ID = course.Department.ID,
+                    ID = course.Department!.ID,
                     Name = course.Department.Name,
                     Budget = course.Department.Budget,
                     StartDate = course.Department.StartDate
@@ -103,7 +103,12 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest();
             }
 
-            course.Department = _context.Departments.Find(course.Department!.ID);
+            if (course.Department == null)
+            {
+                return BadRequest("Department is required.");
+            }
+
+            course.Department = _context.Departments.Find(course.Department.ID);
             _context.Entry(course).State = EntityState.Modified;
 
             try
@@ -134,7 +139,12 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            course.Department = _context.Departments.Find(course.Department!.ID);
+            if (course.Department == null)
+            {
+                return BadRequest("Department is required.");
+            }
+
+            course.Department = _context.Departments.Find(course.Department.ID);
             _context.Courses.Add(course);
             await _context.SaveChangesAsync();
 

@@ -36,7 +36,7 @@ namespace ContosoUniversity.API.Controllers
                     StartDate = c.StartDate,
                     Instructor = new DTO.Instructor()
                     {
-                        ID = c.Instructor.ID,
+                        ID = c.Instructor!.ID,
                         LastName = c.Instructor.LastName,
                         FirstName = c.Instructor.FirstName,
                         HireDate = c.Instructor.HireDate
@@ -75,7 +75,7 @@ namespace ContosoUniversity.API.Controllers
                 StartDate = department.StartDate,
                 Instructor = new DTO.Instructor()
                 {
-                    ID = department.Instructor.ID,
+                    ID = department.Instructor!.ID,
                     LastName = department.Instructor.LastName,
                     FirstName = department.Instructor.FirstName,
                     HireDate = department.Instructor.HireDate
@@ -99,7 +99,12 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest();
             }
 
-            department.Instructor = _context.Instructors.Find(department.Instructor!.ID);
+            if (department.Instructor == null)
+            {
+                return BadRequest("Instructor is required.");
+            }
+
+            department.Instructor = _context.Instructors.Find(department.Instructor.ID);
             _context.Entry(department).State = EntityState.Modified;
 
             try
@@ -130,7 +135,12 @@ namespace ContosoUniversity.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            department.Instructor = _context.Instructors.Find(department.Instructor!.ID);
+            if (department.Instructor == null)
+            {
+                return BadRequest("Instructor is required.");
+            }
+
+            department.Instructor = _context.Instructors.Find(department.Instructor.ID);
             _context.Departments.Add(department);
             await _context.SaveChangesAsync();
 
