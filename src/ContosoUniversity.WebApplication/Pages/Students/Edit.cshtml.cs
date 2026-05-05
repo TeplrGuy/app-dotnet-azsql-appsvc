@@ -20,7 +20,7 @@ namespace ContosoUniversity.WebApplication.Pages.Students
         }
 
         [BindProperty]
-        public Models.APIViewModels.Student Student { get; set; }
+        public Models.APIViewModels.Student? Student { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -46,7 +46,7 @@ namespace ContosoUniversity.WebApplication.Pages.Students
                 return Page();
             }
 
-            var response = await client.CreateClient("client").PutAsync("api/Students/" + Student.Id, new StringContent(JsonConvert.SerializeObject(Student), Encoding.UTF8, "application/json"));
+            var response = await client.CreateClient("client").PutAsync("api/Students/" + Student?.Id, new StringContent(JsonConvert.SerializeObject(Student), Encoding.UTF8, "application/json"));
 
             if (response.IsSuccessStatusCode)
                 return RedirectToPage("./Index");

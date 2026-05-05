@@ -16,7 +16,7 @@ namespace ContosoUniversity.WebApplication.Pages.Courses
         }
 
         [BindProperty]
-        public Models.APIViewModels.Course Course { get; set; }
+        public Models.APIViewModels.Course? Course { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

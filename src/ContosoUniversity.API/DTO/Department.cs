@@ -6,12 +6,12 @@ namespace ContosoUniversity.API.DTO
     {
         public int ID { get; set; }
 
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         public decimal Budget { get; set; }
 
         public DateTime StartDate { get; set; }
 
-        public Instructor Instructor { get; set; }
+        public Instructor? Instructor { get; set; }
     }
 }

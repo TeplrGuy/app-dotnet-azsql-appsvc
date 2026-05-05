@@ -5,6 +5,6 @@ namespace ContosoUniversity.WebApplication.Models.APIViewModels
     public class StudentResult : PageableResult
     {
 
-        public List<Student> Students { get; set; }
+        public List<Student> Students { get; set; } = new List<Student>();
     }
 }

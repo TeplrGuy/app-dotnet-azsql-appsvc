@@ -4,6 +4,6 @@ namespace ContosoUniversity.WebApplication.Models.APIViewModels
 {
     public class InstructorResult : PageableResult
     {
-        public List<Instructor> Instructors { get; set; }
+        public List<Instructor> Instructors { get; set; } = new List<Instructor>();
     }
 }

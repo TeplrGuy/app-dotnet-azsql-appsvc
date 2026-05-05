@@ -16,7 +16,7 @@ namespace ContosoUniversity.API.Controllers
 
             try
             {
-                regionName = System.Environment.GetEnvironmentVariable("REGION_NAME").ToString();
+                regionName = System.Environment.GetEnvironmentVariable("REGION_NAME") ?? string.Empty;
             }
             catch
             {
@@ -25,7 +25,7 @@ namespace ContosoUniversity.API.Controllers
 
             try
             {
-                dbHost = System.Environment.GetEnvironmentVariable("DBHOST").ToString();
+                dbHost = System.Environment.GetEnvironmentVariable("DBHOST") ?? string.Empty;
             }
             catch
             {
@@ -34,7 +34,7 @@ namespace ContosoUniversity.API.Controllers
 
             try
             {
-                dbName = System.Environment.GetEnvironmentVariable("DBNAME").ToString();
+                dbName = System.Environment.GetEnvironmentVariable("DBNAME") ?? string.Empty;
             }
             catch
             {

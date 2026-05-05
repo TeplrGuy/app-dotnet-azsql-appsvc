@@ -14,7 +14,7 @@ namespace ContosoUniversity.WebApplication.Pages.Courses
             this.client = client;
         }
 
-        public Models.APIViewModels.CoursesResult Course { get; set; }
+        public Models.APIViewModels.CoursesResult? Course { get; set; }
 
         public async Task OnGetAsync()
         {

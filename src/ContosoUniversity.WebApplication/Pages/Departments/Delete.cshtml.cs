@@ -16,7 +16,7 @@ namespace ContosoUniversity.WebApplication.Pages.Departments
         }
 
         [BindProperty]
-        public Models.APIViewModels.Department Department { get; set; }
+        public Models.APIViewModels.Department? Department { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

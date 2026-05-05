@@ -19,8 +19,8 @@ namespace ContosoUniversity.WebApplication.Pages.Students
         }
 
         [BindProperty]
-        public Models.APIViewModels.Student Student { get; set; }
-        public string ErrorMessage { get; set; }
+        public Models.APIViewModels.Student? Student { get; set; }
+        public string? ErrorMessage { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id, bool? saveChangesError = false)
         {

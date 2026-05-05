@@ -25,7 +25,7 @@ namespace ContosoUniversity.WebApplication.Pages.Students
         }
 
         [BindProperty]
-        public Models.APIViewModels.Student Student { get; set; }
+        public Models.APIViewModels.Student? Student { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
